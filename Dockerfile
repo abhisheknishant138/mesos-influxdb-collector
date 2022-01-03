@@ -11,7 +11,7 @@ RUN mkdir -p /go/src/github.com/kpacha/mesos-influxdb-collector
 COPY . /go/src/github.com/kpacha/mesos-influxdb-collector
 
 WORKDIR /go/src/github.com/kpacha/mesos-influxdb-collector
-RUN export GO111MODULE=on &&  make install
+RUN export GO111MODULE=on && make install
 
 ENTRYPOINT ["/go/bin/mesos-influxdb-collector"]
 
